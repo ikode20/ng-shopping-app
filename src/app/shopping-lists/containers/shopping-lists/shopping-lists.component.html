@@ -1,0 +1,7 @@
+<h1>My Shopping Lists</h1>
+<new-shopping-list (added)="createList($event)"></new-shopping-list>
+<shopping-list
+  *ngFor="let item of lists"
+  [list]="item"
+  (delete)="deleteList($event)">
+</shopping-list>

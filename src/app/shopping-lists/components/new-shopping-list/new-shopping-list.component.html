@@ -1,0 +1,21 @@
+<form (ngSubmit)="onAdd(listName.value, form.valid)" #form="ngForm" novalidate>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <input
+        type="text"
+        name="listname"
+        class="form-control mb-2"
+        required
+        ngModel
+        #listName>
+    </div>
+    <div class="col-auto">
+      <button
+        type="submit"
+        class="btn btn-primary mb-2"
+        [disabled]="form.invalid">
+        Add
+      </button>
+    </div>
+  </div>
+</form>
